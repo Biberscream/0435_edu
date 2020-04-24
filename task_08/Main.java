@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int TC = scan.nextInt();
-        int FT = (9 / 5) * TC +32;
+        int FT = (9 / 5) * TC + 32;
         System.out.print(FT);
     }
 }
@@ -23,7 +23,7 @@ public class Main {
             }
             TC = scan.nextInt();
         } while (TC <= 0);
-        int TF = TC * (9 / 5)+32;
+        int TF = TC * (9 / 5) + 32;
         System.out.println("Fahrenheit temperature is "+TF);
         System.out.println("Thank you");
     }

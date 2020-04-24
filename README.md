@@ -1,2 +1,1 @@
-# Education
-Home and learning tasks
+# 0435_edu

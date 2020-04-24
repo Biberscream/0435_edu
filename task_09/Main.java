@@ -6,6 +6,7 @@ public class Main {
         int a = scan.nextInt();
         int b = scan.nextInt();
         if (a > b) System.out.println(a);
+        else if (b > a) System.out.println(b);
         else if (a == b) System.out.println(a + b);
     }
 }

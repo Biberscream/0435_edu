@@ -1,10 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        int[] nums = {5,3,9,4,87,6};
-        int min = nums[0];
-        for (int i = 1; i < 6; i++) {
-            if (min>nums[i]) min = nums[i];
+        int[] num = {1, 84, 3, 64, 12, 8, 7, 9, 2, 1};
+        int max = 0;
+        for (int i = 1; i < 10; i++) {
+            if (max < num[i])
+                max = num[i];
         }
-        System.out.println(min);
+        System.out.print("Max number:  "+max);
     }
-
+}

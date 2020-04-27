@@ -1,8 +1,20 @@
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int arr[];
-        arr = new int [10];
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter array length: ");
+        int size = input.nextInt();
+        int array[] = new int[size];
+        System.out.println("Insert array elements: ");
+        for (int i = 0; i < size; i++) {
+            array[i] = input.nextInt();
+        }
+        System.out.print ("Inserted array elements:");
+        for (int i = 0; i < size; i++) {
+            System.out.print (" " + array[i]);
+        }
+        System.out.println();
     }
+}
 
-    // Оснавная идея в том, чтобы сканнер брал значения , которые берутся с клавиатуры и записывал их в массив. Попробую позже
+    // А дальше надо написать код, который бы выполнял операции над массивом

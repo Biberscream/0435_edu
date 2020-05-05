@@ -10,26 +10,76 @@
 ...*/
 public class Main {
     public static void main(String[] args) {
-        // напишите тут ваш код
+        Human grandpa = new Human("Evgeniy", false, 80, null, null);
+        Human grandma = new Human("Alexandra", true, 75, null, null);
+        Human grandpa2 = new Human("Juriy", false, 80, null, null);
+        Human grandma2 = new Human("Svetlana", true, 78, null, null);
+        Human michael = new Human("Michael", false, 57, grandpa2, grandma2);
+        Human svetlana = new Human("Svetlana", true, 55, grandpa, grandma);
+        Human evgenia = new Human("Evgenia", true, 35, michael, svetlana);
+        Human albert = new Human("Albert", false, 28, michael, svetlana);
+        Human artem = new Human("Artem", false, 11, null, evgenia);
+        Human mikle = new Human("Mikle", false, 25, michael, svetlana);
+
+        //albert.getInfo();
+        grandpa.getInfo2();
+        grandma.getInfo2();
+        grandpa2.getInfo2();
+        grandma2.getInfo2();
+        michael.getInfo2();
+        svetlana.getInfo2();
+        evgenia.getInfo2();
+        albert.getInfo2();
+        artem.getInfo2();
+        mikle.getInfo2();
     }
-    public static class Human {
-        // напишите тут ваш код
+}
 
-        public String toString() {
-            String text = "";
-            text += "Имя: " + this.name;
-            text += ", пол: " + (this.sex ? "мужской" : "женский");
-            text += ", возраст: " + this.age;
+// класс Human с полями имя(String), пол(boolean), возраст(int), отец(Human), мать(Human);
+// Весь класс Human записан в отдельной вкладке
+public class Human {
+    String name;
+    boolean gender;
+    int age;
+    Human father;
+    Human mother;
 
-            if (this.father != null) {
-                text += ", отец: " + this.father.name;
-            }
+    Human(String name, boolean gender, int age, Human father, Human mother) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+        this.father = father;
+        this.mother = mother;
+    }
 
-            if (this.mother != null) {
-                text += ", мать: " + this.mother.name;
-            }
+    public String getInfo() {
+        String info = "";
+        info += "Info about " + this.name;
+        info += ": " + (this.gender ? "female;" : "male");
+        info += ", " + this.age + " years old";
 
-            return text;
+        if (this.father != null) {
+            info += ", " + "father: " + this.father.name;
         }
+
+        if (this.mother != null) {
+            info += ", " + "mother: " + this.mother.name + ".";
+        }
+
+        return info;
     }
+
+    public boolean isGender() {
+        return gender;
+    }
+
+    public void setGender(boolean gender) {
+        this.gender = gender;
+    }
+
+
+    public void getInfo2() {
+        System.out.println(getInfo());
+    }
+
 }

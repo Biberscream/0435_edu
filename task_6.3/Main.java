@@ -30,9 +30,10 @@ class MarkTwainBook extends Book {
         return getAuthor();
     }
 }
+//в коде дальше указывал модификаторы доступа Puclic,чтобы разобраться с ними в будущем. 
 
 abstract class Book {
-    private String author;
+    public String author;
 
     public Book(String author) {
         this.author = author;
@@ -42,6 +43,7 @@ abstract class Book {
         return author;
     }
 
+  
     public void setAuthor(String author) {
         this.author = author;
     }
